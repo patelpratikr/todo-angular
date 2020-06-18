@@ -19,15 +19,6 @@ namespace BlogsService.Controllers
             var blogs = blogsEntities.Blogs.ToList();
 
             return JsonConvert.SerializeObject(blogs);
-        }
-
-        public bool Add(Blog blog)
-        {
-            var blogsEntities = new BlogsEntities();
-
-            blogsEntities.Blogs.Add(blog);
-
-            return blogsEntities.SaveChanges() > 0;
-        }
+        }                
     }
 }

@@ -1,0 +1,9 @@
+Steps to run:
+
+1)  Get the latest from git.
+2)  Make sure internet connection is on.
+3)  Install "CORS Everywhere" in Firefox/chrome
+4)  Run the DB Script located in the "blogs-db" folder.
+5)  Run the blog-service project in Visual Studio 2019
+6)  Run TodoList in the firefox/chrome.
+7)  See the data in form of table.
