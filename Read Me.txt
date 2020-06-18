@@ -6,4 +6,11 @@ Steps to run:
 4)  Run the DB Script located in the "blogs-db" folder.
 5)  Run the blog-service project in Visual Studio 2019
 6)  Run TodoList in the firefox/chrome.
-7)  See the data in form of table.
+7)  See the ToDo data in the form of table.
+
+
+Yet to be implemented:
+
+1)  Add new Todo
+2)  Find Todo
+3)  Rename/Delete Todo

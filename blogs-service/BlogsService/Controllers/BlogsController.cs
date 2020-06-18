@@ -11,14 +11,50 @@ namespace BlogsService.Controllers
 {   
     public class BlogsController : Controller
     {
+        private IBlogRepository _blogRepository;
+
+        public BlogsController(IBlogRepository repository)
+        {
+            _blogRepository = repository;
+        }
+
         // GET: Blogs
         public string GetAll()
         {
-            var blogsEntities = new BlogsEntities();
+            try
+            {
+                return JsonConvert.SerializeObject(_blogRepository.GetAll());
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
 
-            var blogs = blogsEntities.Blogs.ToList();
+        // GET: Blogs
+        public bool Delete(int blogId)
+        {
+            try
+            {
+                return _blogRepository.Delete(blogId);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
-            return JsonConvert.SerializeObject(blogs);
-        }                
+        public bool Add(Blog blog)
+        {
+            try
+            {
+                return _blogRepository.Add(blog);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
