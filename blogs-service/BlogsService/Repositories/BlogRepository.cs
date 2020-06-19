@@ -33,6 +33,8 @@ namespace BlogsService.Repositories
 
                 blogsEntities.Blogs.Remove(blogsEntities.Blogs.Where(a => a.ID == blogId).FirstOrDefault());
 
+                blogsEntities.SaveChanges();
+
                 return true;
             }
             catch (Exception)
